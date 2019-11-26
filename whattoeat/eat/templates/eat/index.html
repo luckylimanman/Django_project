@@ -1,0 +1,13 @@
+{% if 1 %}
+    <form name="input" action="eat_result" method="get">
+    <input type="submit" value="吃什么">
+    </form>
+    <form name="input" action="/admin/eat/restaurant/add/" method="get">
+    <input type="submit" value="添加餐厅">
+    </form>
+    <form name="input" action="view_restaurant" method="get">
+    <input type="submit" value="查看已有餐厅">
+    </form>
+{% else %}
+    <p>No restuarant are available.</p>
+{% endif %}

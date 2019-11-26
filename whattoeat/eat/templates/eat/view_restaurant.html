@@ -1,0 +1,13 @@
+{% if restuarant_all %}
+    <ul>
+    {% for restuarant in restuarant_all %}
+        <li><a href="/eat/{{ restuarant.id }}/">{{ restuarant.restuarant_text }}</a></li>
+        <p>评分{{ restuarant.restuarant_evaluate }}</p>
+        <form name="input" action="/admin/eat/restaurant/{{ restuarant.id }}/change/" method="get">
+        <input type="submit" value="修改">
+        </form>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No restuarant are available.</p>
+{% endif %}
